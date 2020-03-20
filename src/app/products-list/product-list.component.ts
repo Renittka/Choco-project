@@ -11,7 +11,6 @@ import {Location} from '@angular/common';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  product: Product;
   products = PRODUCTS;
   constructor(
     private router: Router,

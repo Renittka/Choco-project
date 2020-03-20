@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'products', component: ProductListComponent},
   { path: '', redirectTo: '/categories', pathMatch: 'full' },
   { path: 'categories', component: CategoriesComponent},
-  { path: 'products/:id', component: ProductDetailComponent},
+  { path: 'categories/:id', component: ProductListComponent},
  ];
 
 @NgModule({

@@ -16,7 +16,7 @@ export class CategoriesComponent implements OnInit {
     private route: ActivatedRoute,
     private productService: ProductService
   ) {
-    this.router.events.subscribe((value =>{
+    this.router.events.subscribe((value => {
       this.getProducts();
     }));
   }
