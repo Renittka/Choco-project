@@ -9,10 +9,8 @@ import { ProductService} from '../product.service';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  @Input() product;
 
   products = PRODUCTS;
-// items: any;
   constructor(
     private router: Router,
     private route: ActivatedRoute,

@@ -1,1 +1,40 @@
-<p>product-detail works!</p>
+<div class="col-md-4">
+  <div class="main1">
+    <div class="photo1">
+      <a routerLink="/detail/{{product.id}}">
+        <img class="photoSize" src="{{ product.image }}">
+      </a>
+    </div>
+
+    <div class="context1">
+      <h3>
+        <a id="title" href="{{product.link}}" target="_blank"> {{ product.name }}</a>
+      </h3>
+      <p *ngIf="product.description">
+        {{ product.description }}
+      </p>
+      <p *ngIf="product.price">
+        {{product.price}}
+      </p>
+      <p *ngIf="product.rating">
+        <img id="rating" src="https://pngimage.net/wp-content/uploads/2018/06/rating-star-png-6.png">
+        {{ product.rating }}
+      </p>
+      <div class="share1">
+        <a target="_blank" href="https://api.whatsapp.com/send?text=See%20this!%20url={{product.link}}"
+           data-action="share/whatsapp/share">
+          <img id="whatsapp"
+               src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/1024px-
+               WhatsApp_logo-color-vertical.svg.png">
+        </a>
+
+        <a target="_blank" href="https://t.me/share/url?url={{product.link}}" data-action="share/whatsapp/share">
+          <img id="telegram"
+               src="https://image.winudf.com/v2/image1/Y29tLndXaGF0c2FwcGpiXzg2MTY3NTRfaWNvbl8xNTUwNzI3OTE1XzA1OA/icon.
+               png?w=170&fakeurl=1">
+        </a>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
