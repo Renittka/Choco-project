@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { PRODUCTS } from '../products-mock';
 import {ActivatedRoute, Router} from '@angular/router';
 import { ProductService} from '../product.service';
+import {Product} from '../product';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-main',
@@ -9,14 +11,15 @@ import { ProductService} from '../product.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-
+  product: Product;
   products = PRODUCTS;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private productService: ProductService
+    private productService: ProductService,
+    private location: Location
   ) {
-    this.router.events.subscribe((value =>{
+    this.router.events.subscribe((value => {
       this.getProducts();
     }));
   }
@@ -27,5 +30,8 @@ export class ProductListComponent implements OnInit {
   getProducts() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.productService.getProductsByCategoryId(id).subscribe(products => this.products = products);
+  }
+  goBack(): void {
+    this.location.back();
   }
 }
