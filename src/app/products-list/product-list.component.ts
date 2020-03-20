@@ -5,10 +5,10 @@ import { ProductService} from '../product.service';
 
 @Component({
   selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.css']
 })
-export class MainComponent implements OnInit {
+export class ProductListComponent implements OnInit {
 
   products = PRODUCTS;
   constructor(
