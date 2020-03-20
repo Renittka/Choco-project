@@ -1,1 +1,4 @@
-<p>categories works!</p>
+<h2>Categories</h2>
+<div *ngFor="let category of categories">
+  <h5 routerLink="/products/{{category.id}}" style="color:blue">{{category.name}}</h5>
+</div>
