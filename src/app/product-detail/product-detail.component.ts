@@ -10,7 +10,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
-  @Input() product;
+  product: Product;
   constructor(   private router: Router, private route: ActivatedRoute, private productsService: ProductService,
                  private location: Location ) {
   }
