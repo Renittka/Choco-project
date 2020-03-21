@@ -9,8 +9,9 @@
 }
 
 .photoSize {
-  width: 350px;
-  height: 350px;
+  size: 30px;
+  /*width: 350px;*/
+  /*height: 350px;*/
   transition: transform .25s ease;
 }
 .first {

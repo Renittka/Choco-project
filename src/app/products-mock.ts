@@ -18,7 +18,8 @@ export const PRODUCTS: Product[] = [
     min_order : 4000,
     rating: 5,
     description: 'Магазин цветов',
-    image: ''
+    image: 'https://thumb.chocofood.kz/QyaVXqbnqspEf2n7xR3eOyuLSzE=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'Geo-Fiore.jpg'
   },
   { id: 11,
     category_id: 1,
@@ -28,7 +29,8 @@ export const PRODUCTS: Product[] = [
     min_order : 4000,
     rating: 5,
     description: 'Магазин цветов',
-    image: ''
+    image: 'https://thumb.chocofood.kz/RastzxOyP_UpROENYvVt8MhRjFE=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'Rouge.jpg'
   },
   { id: 12,
     category_id: 1,
@@ -38,7 +40,8 @@ export const PRODUCTS: Product[] = [
     min_order : 4000,
     rating: 5,
     description: 'Магазин цветов',
-    image: ''
+    image: 'https://thumb.chocofood.kz/p1n2QENKZBxjhT75xP1j1GSHQIk=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'Zakazbuketov.jpg'
   },
   { id: 13,
     category_id: 1,
@@ -48,7 +51,8 @@ export const PRODUCTS: Product[] = [
     min_order : 4000,
     rating: 5,
     description: 'Магазин цветов',
-    image: ''
+    image: 'https://thumb.chocofood.kz/rw7Z4T_WH9UFW8zwFUQKLsGu1MU=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      '1_utr4aYU.jpg'
   },
   { id: 14,
     category_id: 1,
@@ -58,7 +62,8 @@ export const PRODUCTS: Product[] = [
     min_order : 4000,
     rating: 5,
     description: 'Магазин цветов',
-    image: ''
+    image: 'https://thumb.chocofood.kz/4gThjNco-cUYjqB6K7EE2JO9BRo=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'Rafale.jpg'
   },
   { id: 15,
     category_id: 1,
@@ -68,7 +73,8 @@ export const PRODUCTS: Product[] = [
     min_order : 4000,
     rating: 5,
     description: 'Магазин цветов',
-    image: ''
+    image: 'https://thumb.chocofood.kz/VEFUbbDBiwRNACtKdT7rn2zrCbs=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      '1_GZKDpZp.jpg'
   },
   { id: 16,
     category_id: 1,
@@ -78,7 +84,8 @@ export const PRODUCTS: Product[] = [
     min_order : 4000,
     rating: 5,
     description: 'Магазин цветов',
-    image: ''
+    image: 'https://thumb.chocofood.kz/N_6HZzEkLXy2ELqeFk5TR6TeWBU=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      '1_NHU2naQ.jpg'
   },
   { id: 17,
     category_id: 1,
@@ -88,7 +95,8 @@ export const PRODUCTS: Product[] = [
     min_order : 4000,
     rating: 5,
     description: 'Магазин цветов',
-    image: ''
+    image: 'https://thumb.chocofood.kz/FRmW-efN56r33mhJZo-Qpr5XPq8=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'Logo-1080-1080_c9cXm7a.jpg'
   },
   { id: 18,
     category_id: 1,
@@ -98,7 +106,8 @@ export const PRODUCTS: Product[] = [
     min_order : 3825,
     rating: 5,
     description: 'Магазин цветов',
-    image: ''
+    image: 'https://thumb.chocofood.kz/W5DhamDYZDVl7Hw9kP3Nlegdiwc=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      '1_fnscGWP.jpg'
   },
   { id: 19,
     category_id: 1,
@@ -108,7 +117,8 @@ export const PRODUCTS: Product[] = [
     min_order : 4000,
     rating: 4.5,
     description: 'Магазин цветов',
-    image: ''
+    image: 'https://thumb.chocofood.kz/OL2dX4_US4h6zFVsEbcll21g5Mk=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'logo_o8xa7yB.jpg'
   },
   //// Pizza
   { id: 20,
@@ -119,7 +129,8 @@ export const PRODUCTS: Product[] = [
     min_order : 0,
     rating: 5,
     description: 'Пиццерия',
-    image: ''
+    image: 'https://thumb.chocofood.kz/-1dcyP5-NwxsMkrINCa905S35Wo=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'Chibo-sano_Y5dBeXx.jpg'
   },
   { id: 21,
     category_id: 2,
@@ -129,7 +140,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 5,
     description: 'Ресторан',
-    image: ''
+    image: 'https://thumb.chocofood.kz/X5Lf6Nzqy2_lX_CrsLMV7G93BUE=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'pomodoro.jpg'
   },
   { id: 22,
     category_id: 2,
@@ -139,7 +151,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 5,
     description: 'Кафе',
-    image: ''
+    image: 'https://thumb.chocofood.kz/Kb6qfx8B3yumfE_2t7cN7dGhMYY=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'logo_VPS6b4G.jpg'
   },
   { id: 23,
     category_id: 2,
@@ -149,7 +162,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 5,
     description: 'Ресторан',
-    image: ''
+    image: 'https://thumb.chocofood.kz/Wvto3yGFc40QGntkTJfoFOuNd08=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'dolcetto.jpg'
   },
   { id: 24,
     category_id: 2,
@@ -169,7 +183,8 @@ export const PRODUCTS: Product[] = [
     min_order : 3000,
     rating: 5,
     description: 'Кафе',
-    image: ''
+    image: 'https://thumb.chocofood.kz/4E992XnvM9gqwsWRtYMXXDNXUUk=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'Centr_Plova_tEWbSee.jpeg'
   },
   { id: 26,
     category_id: 2,
@@ -199,7 +214,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 5,
     description: 'Кафе',
-    image: ''
+    image: 'https://thumb.chocofood.kz/g6BaKvNxIeyMs0eV5HeK-Vp5n8g=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'la-pizza_T7qjaNz.jpg'
   },
   { id: 29,
     category_id: 2,
@@ -209,7 +225,7 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 5,
     description: 'Кафе',
-    image: ''
+    image: 'https://thumb.chocofood.kz/npinhyU2R294CNQaZDcvQqRJN1o=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/chad.jpg'
   },
   //// Sushi
   { id: 30,
@@ -240,7 +256,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 5,
     description: 'Кафе',
-    image: ''
+    image: 'https://thumb.chocofood.kz/df4yAgbBPXe6yIkQY6n7U7DsDFk=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'logo_7fMflYf.jpg'
   },
   { id: 33,
     category_id: 3,
@@ -250,7 +267,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 5,
     description: 'Суши-бар',
-    image: ''
+    image: 'https://thumb.chocofood.kz/jpAn0A_Xi1uex1Kip-MS9XPi5KQ=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'SushiRolls_sd5uJTs.jpg'
   },
   { id: 34,
     category_id: 3,
@@ -260,7 +278,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 5,
     description: 'Служба доставки',
-    image: ''
+    image: 'https://thumb.chocofood.kz/onxjmcPOCkOY-3HYAGCW-uOPJrc=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'Beta-Pizza.jpg'
   },
   { id: 35,
     category_id: 3,
@@ -310,7 +329,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 4.5,
     description: 'Служба доставки',
-    image: ''
+    image: 'https://thumb.chocofood.kz/V4XGjdPWqLpDFU0V7c5lrXnZPZo=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'MIO-PIZZA.jpg'
   },
   //// Burgers
   { id: 40,
@@ -321,7 +341,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 5,
     description: 'Кафе',
-    image: ''
+    image: 'https://thumb.chocofood.kz/EyQ9Xe8s7dyX8LP2uOI9OqgpreQ=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'Istanbul_vLl40Qi.jpg'
   },
   { id: 41,
     category_id: 4,
@@ -331,7 +352,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 5,
     description: 'Пиццерия',
-    image: ''
+    image: 'https://thumb.chocofood.kz/wUW0y-hv78RoMf3QWCIu8livhks=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'Pizza-Italiano_jbJYIVH.jpg'
   },
   { id: 42,
     category_id: 4,
@@ -341,7 +363,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 5,
     description: 'Ресторан',
-    image: ''
+    image: 'https://thumb.chocofood.kz/3yd_EFu1sYpyVaZSmPTKaj26psQ=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      '1_3V8rt1C.jpg'
   },
   { id: 43,
     category_id: 4,
@@ -351,7 +374,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 5,
     description: 'Пиццерия',
-    image: ''
+    image: 'https://thumb.chocofood.kz/p0tA6SSXu6FvDP80NpjKUDMcKJw=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'Donna-Pizza.jpg'
   },
   { id: 44,
     category_id: 4,
@@ -361,7 +385,8 @@ export const PRODUCTS: Product[] = [
     min_order : 3500,
     rating: 5,
     description: 'Кафе',
-    image: ''
+    image: 'https://thumb.chocofood.kz/9wo8azCG3VZgmt_rzPDpK5dvdxc=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'Hmelnaya-prazhecka.jpg'
   },
   { id: 45,
     category_id: 4,
@@ -371,7 +396,8 @@ export const PRODUCTS: Product[] = [
     min_order : 1600,
     rating: 4.5,
     description: 'Фаст-фуд',
-    image: ''
+    image: 'https://thumb.chocofood.kz/DBsshjlTBwlCG3XONgv6K2xSsNc=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'Gippo.jpg'
   },
   { id: 46,
     category_id: 4,
@@ -391,7 +417,8 @@ export const PRODUCTS: Product[] = [
     min_order : 0,
     rating: 4.5,
     description: 'Фаст-фуд',
-    image: ''
+    image: 'https://thumb.chocofood.kz/hPnmQ8vroMDl1GVrUhVF0kQQ5O4=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'KFCLOG_rk8mGDt.jpg'
   },
   { id: 48,
     category_id: 4,
@@ -422,7 +449,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 5,
     description: 'Пиццерия',
-    image: ''
+    image: 'https://thumb.chocofood.kz/nObbjgwwMPFpilTh1JxIkKOKNG8=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'Ciao-pizza--mamma-mia_ssUGu4x.jpg'
   },
   { id: 51,
     category_id: 5,
@@ -462,7 +490,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 4.5,
     description: 'Ресторан',
-    image: ''
+    image: 'https://thumb.chocofood.kz/z3wbeD2jOg5FQBZTTRnGOAOKAmk=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'malinamix.jpg'
   },
   { id: 55,
     category_id: 5,
@@ -472,7 +501,8 @@ export const PRODUCTS: Product[] = [
     min_order : 3500,
     rating: 4.5,
     description: 'Ресторан',
-    image: ''
+    image: 'https://thumb.chocofood.kz/8xQ1LmLQC8wcXVoCRi74LVC5-Ow=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      '1_eeFxbt7.jpg'
   },
   { id: 56,
     category_id: 5,
@@ -482,7 +512,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 4.5,
     description: 'Ресторан',
-    image: ''
+    image: 'https://thumb.chocofood.kz/uzQPO5C23Fum03egwirrxSkZWyc=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'delicat.jpg'
   },
   { id: 57,
     category_id: 5,
@@ -512,7 +543,8 @@ export const PRODUCTS: Product[] = [
     min_order : 1600,
     rating: 4.5,
     description: 'Фаст-фуд',
-    image: ''
+    image: 'https://thumb.chocofood.kz/GsGx7IUjRi7IBVA2fM2W8Fx5kew=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'kuropatka.jpg'
   }
 
 
