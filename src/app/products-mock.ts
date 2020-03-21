@@ -173,7 +173,7 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 5,
     description: 'Ресторан',
-    image: ''
+    image: 'https://thumb.chocofood.kz/At979eGHgTzr_5pugzFI4WUo26s=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/alfa.jpg'
   },
   { id: 25,
     category_id: 2,
@@ -194,7 +194,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 5,
     description: 'Служба доставки',
-    image: ''
+    image: 'https://thumb.chocofood.kz/MzP2nrxhCPXS47F3zo3FUQxE5SU=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'WhatsApp_Image_2020-01-30_at_13.43.22.jpeg'
   },
   { id: 27,
     category_id: 2,
@@ -204,7 +205,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2000,
     rating: 5,
     description: 'Ресторан',
-    image: ''
+    image: 'https://thumb.chocofood.kz/cHgDa4ljypB49j2AzqDU70YFHAo=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'Sadu_yLX219y.jpg'
   },
   { id: 28,
     category_id: 2,
@@ -230,13 +232,14 @@ export const PRODUCTS: Product[] = [
   //// Sushi
   { id: 30,
     category_id: 3,
-    name: 'Чибо Сано',
+    name: 'Olivier Restaurant & Bar',
     delivery_time: 60,
-    delivery_cost: 600,
+    delivery_cost: 0,
     min_order : 2500,
     rating: 4.5,
     description: 'Пиццерия',
-    image: ''
+    image: 'https://thumb.chocofood.kz/_LzYftXas9TocyYVL-lUPq3knps=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'olivier.jpg'
   },
   { id: 31,
     category_id: 3,
@@ -246,7 +249,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 5,
     description: 'Суши-бар',
-    image: ''
+    image: 'https://thumb.chocofood.kz/IU4CbXyaZBqOPCQBZ7vnAHH5crA=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'Hokku-sushi.jpg'
   },
   { id: 32,
     category_id: 3,
@@ -289,7 +293,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 4.5,
     description: 'Ресторан',
-    image: ''
+    image: 'https://thumb.chocofood.kz/kxVu0qZjDmLeo6tEWumYENQYAqE=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      '1_ttbrUgr.jpg'
   },
   { id: 36,
     category_id: 3,
@@ -299,7 +304,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 4.5,
     description: 'Ресторан',
-    image: ''
+    image: 'https://thumb.chocofood.kz/LzVOIIxI6GgBi-QdYJ9fg5LJ8Qc=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'Takara-Sushi-Bar_WqW8r8O.jpg'
   },
   { id: 37,
     category_id: 3,
@@ -309,7 +315,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 4.5,
     description: 'Служба доставки',
-    image: ''
+    image: 'https://thumb.chocofood.kz/_GXpn1DL_qGsYnjl_ra3riqg7ow=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'Sushiwok_BoAzR88.jpg'
   },
   { id: 38,
     category_id: 3,
@@ -319,7 +326,8 @@ export const PRODUCTS: Product[] = [
     min_order : 3000,
     rating: 4.5,
     description: 'Суши-бар',
-    image: ''
+    image: 'https://thumb.chocofood.kz/3OGdKAAIgHNu6JsQZRzttxS7CbE=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      '1_033p0ZL.jpg'
   },
   { id: 39,
     category_id: 3,
@@ -407,7 +415,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 4.5,
     description: 'Ресторан',
-    image: ''
+    image: 'https://thumb.chocofood.kz/vvGvKMTh-fcN2wZXftXlRT7DBzI=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'LOGO_NrExyCK.jpg'
   },
   { id: 47,
     category_id: 4,
@@ -428,7 +437,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 4.5,
     description: 'Ресторан',
-    image: ''
+    image: 'https://thumb.chocofood.kz/gFlmZ1f4SngXPFUEt2eN5qnM0_k=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      '123_FTm4lpg.png'
   },
   { id: 49,
     category_id: 4,
@@ -438,7 +448,7 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 4.5,
     description: 'Кафе',
-    image: ''
+    image: 'https://thumb.chocofood.kz/qWU9HDtN26hF6-STrWsMNH69K-g=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/Coco.jpg'
   },
   //// Dessert
   { id: 50,
@@ -460,7 +470,8 @@ export const PRODUCTS: Product[] = [
     min_order : 3000,
     rating: 5,
     description: 'Кондитерская',
-    image: ''
+    image: 'https://thumb.chocofood.kz/cFl00Hj58gmBgxCL75u3QcSCWXo=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'kulik_I55IxX0.jpg'
   },
   { id: 52,
     category_id: 5,
@@ -470,7 +481,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 5,
     description: 'Ресторан',
-    image: ''
+    image: 'https://thumb.chocofood.kz/j0r3qjZJd_FoFkkZ39u2810Yuhw=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'bisquit.jpg'
   },
   { id: 53,
     category_id: 5,
@@ -480,7 +492,8 @@ export const PRODUCTS: Product[] = [
     min_order : 2000,
     rating: 5,
     description: 'Кондитерская',
-    image: ''
+    image: 'https://thumb.chocofood.kz/kQIL7logIa8sOVTZFHX9L6fjy1o=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'sladari_iOl2oI6.png'
   },
   { id: 54,
     category_id: 5,
@@ -523,7 +536,8 @@ export const PRODUCTS: Product[] = [
     min_order : 3500,
     rating: 4.5,
     description: 'Ресторан',
-    image: ''
+    image: 'https://thumb.chocofood.kz/HnWbwZvR1B1qkaVR8fUrJ2awJ04=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/' +
+      'Turandot_7CtHu5M.jpg'
   },
   { id: 58,
     category_id: 5,
@@ -533,7 +547,7 @@ export const PRODUCTS: Product[] = [
     min_order : 2500,
     rating: 4.5,
     description: 'Кафе',
-    image: ''
+    image: 'https://thumb.chocofood.kz/JtSB9mW5s9PQaJFNbVgWq9QqV68=/140x140/smart/https://chocofood.kz/media/site/restaurants/logo/blin.jpg'
   },
   { id: 59,
     category_id: 5,
