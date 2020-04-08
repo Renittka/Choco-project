@@ -1,0 +1,11 @@
+<div class="list_of_categories">
+  <div class="block-list-of-categories">
+    <div *ngFor="let category of categories" class="category">
+      <img class="icon" src="{{ category.image }}">
+      <h5 routerLink="/categories/{{category.id}}" class="category_name">
+        {{category.name}}</h5>
+    </div>
+  </div>
+
+</div>
+

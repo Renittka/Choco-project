@@ -1,0 +1,30 @@
+<button (click)="goBack()" class="knopka">Go back</button>
+<div>
+  <h2>Registration</h2>
+  <p>Quick registration will allow you to:
+    save phone numbers and order addresses, in order not to add them every time</p>
+  <label for = "us_register"></label>
+  <input class="button"  routerLink="/signup" style="margin-top:5px;" type="submit" name="us_register" id="us_register"
+         value = "Register now">
+</div>
+<br>
+<div>
+  <form id="log_form" method="post">
+    <label for = "us_username"></label>
+    <input class="label" type="text" name="us_username" id="us_username" placeholder="example@chocofood.kz"> <br>
+    <label for = "us_password"></label>
+    <input class="label" type="password" name="us_password" id="us_password" placeholder="Password specified during a
+    registration"> <br>
+
+    <label for = "us_submit"></label>
+    <input class="button" style="margin-top:5px;" type="submit" name="us_submit" id="us_submit" value = "Login">
+    <br>
+    <a href=" ">Remind the password</a>
+    <h3>Login with</h3>
+    <div>
+      <img src="https://chocofood.kz/static/social_auth/vk-box.svg?v=1.2.3977" style="size:30px">
+      <img src="https://chocofood.kz/static/social_auth/facebook-box.svg?v=1.2.3977" style="size:30px">
+      <img src="https://chocofood.kz/static/social_auth/google-plus-box.svg?v=1.2.3977" style="size:30px">
+    </div>
+  </form>
+</div>
