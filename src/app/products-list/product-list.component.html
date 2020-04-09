@@ -1,33 +1,43 @@
-<button (click)="goBack()" class="knopka">go back</button>
-<h2 *ngIf="category.name">{{category.name}}</h2>
-<div class="col-md-4" *ngFor="let product of products">
-  <div class="main1">
-    <div class="photo1">
-      <a routerLink="/categories/{{product.id}}">
-        <img class="photoSize" src="{{ product.image }}">
-      </a>
-    </div>
+<div class="product-list">
+  <button (click)="goBack()" class="knopka">go back</button>
+  <p class="hh">Order <span *ngIf="category.name">{{category.name}}</span> in Almaty</p>
 
-    <div class="context1">
-      <h3>
-        <a id="title" href="" target="_blank"> {{ product.name }}</a>
-      </h3>
-      <p *ngIf="product.rating">
-        <img id="rating" src="https://pngimage.net/wp-content/uploads/2018/06/rating-star-png-6.png">
-        {{ product.rating }}
-      </p>
-      <p *ngIf="product.description">
-        {{ product.description }}
-      </p>
-      <p *ngIf="product.delivery_time">
-        Delivery time: {{product.delivery_time}} min
-      </p>
-      <p *ngIf="product.delivery_cost">
-        Delivery cost: {{product.delivery_cost}} tg.
-      </p>
-      <p *ngIf="product.min_order">
-        Minimum order amount: {{product.min_order}} tg.
-      </p>
-    </div>
+  <div class="restarunt-block">
+
+      <div class="col-md-4" *ngFor="let product of products">
+        <div class="main1">
+          <div class="photo1">
+            <a routerLink="/categories/{{product.id}}">
+              <img routerLink="/categories/{{category.id}}/products" class="photoSize" src="{{ product.image }}">
+            </a>
+          </div>
+
+          <div class="context1">
+            <h3>
+              <a id="title" href="" target="_blank"> {{ product.name }}</a>
+            </h3>
+            <p *ngIf="product.rating">
+              <img id="rating" src="https://pngimage.net/wp-content/uploads/2018/06/rating-star-png-6.png">
+              {{ product.rating }}
+            </p>
+            <p *ngIf="product.description">
+              {{ product.description }}
+            </p>
+            <p *ngIf="product.delivery_time">
+              Delivery time: {{product.delivery_time}} min
+            </p>
+            <p *ngIf="product.delivery_cost">
+              Delivery cost: {{product.delivery_cost}} tg.
+            </p>
+            <p *ngIf="product.min_order">
+              Minimum order amount: {{product.min_order}} tg.
+            </p>
+          </div>
+        </div>
+      </div>
+
   </div>
+
+
+
 </div>
