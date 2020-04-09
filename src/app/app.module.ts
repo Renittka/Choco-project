@@ -13,18 +13,20 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { OrderComponent } from './order/order.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ProductListComponent,
-    HeaderComponent,
-    CategoriesComponent,
-    ProductDetailComponent,
-    FooterComponent,
-    LoginComponent,
-    SignupComponent
-  ],
+    declarations: [
+        AppComponent,
+        ProductListComponent,
+        HeaderComponent,
+        CategoriesComponent,
+        ProductDetailComponent,
+        FooterComponent,
+        LoginComponent,
+        SignupComponent,
+        OrderComponent,
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
