@@ -1,7 +1,6 @@
 <div class="product-list">
   <button (click)="goBack()" class="knopka">go back</button>
   <p class="hh">Order <span *ngIf="category.name">{{category.name}}</span> in Almaty</p>
-
   <div class="restarunt-block">
 
       <div class="col-md-4" *ngFor="let restaraunt of products">

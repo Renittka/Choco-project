@@ -16,7 +16,6 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'signup', component: SignupComponent},
   { path: 'categories/:id/:restaraunt_id/:product_id', component: OrderLinkComponent},
-  { path: 'order-link', component: OrderLinkComponent}
  ];
 
 @NgModule({
