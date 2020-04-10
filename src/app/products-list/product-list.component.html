@@ -7,8 +7,8 @@
       <div class="col-md-4" *ngFor="let product of products">
         <div class="main1">
           <div class="photo1">
-            <a routerLink="/categories/{{product.id}}">
-              <img routerLink="/categories/{{category.id}}/products" class="photoSize" src="{{ product.image }}">
+            <a>
+              <img routerLink="/categories/{{category.id}}/{{product.id}}" class="photoSize" src="{{ product.image }}">
             </a>
           </div>
 

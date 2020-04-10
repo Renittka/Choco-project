@@ -1,0 +1,33 @@
+.knopka{
+  background-color: #be2626;
+  color: #ffffff;
+}
+
+.label{
+  margin-top: 40px;
+  color: rgb(5, 0, 0);
+  font-size: 12px;
+  text-decoration: none;
+  font-family: sans-serif;
+  line-height: 1;
+  display: inline;
+}
+
+#data{
+  font-size: 12px;
+  font-family: sans-serif;
+  color: #050101;
+  font-weight: 500;
+}
+
+.p{
+  font-family: Arial;
+  font-size: 16px;
+}
+
+.a{
+  font-family: Arial;
+  min-height: 30px;
+  margin-bottom: -8px;
+  margin-left: -8px;
+}
