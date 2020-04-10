@@ -13,11 +13,11 @@ export class CategoryProductsService {
     return of(CategoryProduct.find(product => product.product_id === id));
   }
 
-  getCategoryProducts(restId: number): Observable<CategoryProducts[]> {
+  getCategoryProducts(restId: number): Observable<CategoryProducts[]>{
     return of(CategoryProduct.filter(product => product.restaraunt_id === restId));
   }
 
-  getProductsByRestaraunt(id: number): Observable<any> {
-    return of(CategoryProduct.filter(product => product.product_id === id));
+  getProductByRestaraunt(id: number): Observable<any> {
+    return of(CategoryProduct.find(product => product.product_id === id));
   }
 }
