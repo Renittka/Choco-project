@@ -31,6 +31,7 @@ export class ProductService {
     return of(categories.find(category => category.id === id));
   }
 
+
   getCategories(): Observable<any> {
     return of(categories);
   }

@@ -9,11 +9,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { ProductListComponent} from './products-list/product-list.component';
 import { HeaderComponent } from './header/header.component';
 import { CategoriesComponent } from './categories/categories.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { OrderComponent } from './order/order.component';
+import { CategoryProductsComponent } from './category-products/category-products.component';
+import { OrderLinkComponent } from './order-link/order-link.component';
 
 @NgModule({
     declarations: [
@@ -21,11 +22,12 @@ import { OrderComponent } from './order/order.component';
         ProductListComponent,
         HeaderComponent,
         CategoriesComponent,
-        ProductDetailComponent,
         FooterComponent,
         LoginComponent,
         SignupComponent,
         OrderComponent,
+        CategoryProductsComponent,
+        OrderLinkComponent,
     ],
   imports: [
     BrowserModule,
