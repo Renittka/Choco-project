@@ -14,6 +14,7 @@ export class CategoryProductsComponent implements OnInit {
   products: CategoryProducts[];
   restaurant: any;
   category;
+  product: CategoryProducts;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -21,13 +22,11 @@ export class CategoryProductsComponent implements OnInit {
     private productService: ProductService,
     private location: Location
   ) {
-    // this.router.events.subscribe((value => {
-    //    this.getProducts();
-    // }));
   }
   ngOnInit() {
     this.getProduct();
     this.getCategory();
+    this.getProductByRestaraunt();
   }
 
   getProduct() {
@@ -38,6 +37,10 @@ export class CategoryProductsComponent implements OnInit {
   getCategory() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.productService.getCategory(id).subscribe(category => this.category = category);
+  }
+  getProductByRestaraunt() {
+    const id = +this.route.snapshot.paramMap.get('product_id');
+    this.CategoryProductService.getProductByRestaraunt(id).subscribe(product => this.product = product);
   }
 
   goBack(): void {
