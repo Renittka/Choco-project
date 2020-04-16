@@ -5,6 +5,13 @@ class Category(models.Model):
     name = models.CharField(max_length=300)
     image = models.CharField(max_length=300)
 
+    class Meta:
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
+
+    def __str__(self):
+        return f'Category id={self.id}, name={self.name}'
+
     def to_json(self):
         return {
             'id': self.id,
@@ -18,9 +25,15 @@ class Restaurant(models.Model):
     delivery_time = models.FloatField()
     delivery_cost = models.FloatField()
     min_order = models.FloatField()
-    rating = models.FloatField()
     description = models.TextField(default='')
     image = models.CharField(max_length=300)
+
+    class Meta:
+        verbose_name = 'Restaurant'
+        verbose_name_plural = 'Restaurants'
+
+    def __str__(self):
+        return f'Restaurant id={self.id}, name={self.name}'
 
     def to_json(self):
         return {
@@ -30,7 +43,6 @@ class Restaurant(models.Model):
             'delivery_time': self.delivery_time,
             'delivery_cost': self.delivery_cost,
             'min_order': self.min_order,
-            'rating': self.rating,
             'description': self.description
         }
 
@@ -42,6 +54,13 @@ class Product(models.Model):
     delivery_cost = models.FloatField()
     description = models.TextField(default='')
     image = models.CharField(max_length=300)
+
+    class Meta:
+        verbose_name = 'Product'
+        verbose_name_plural = 'Products'
+
+    def __str__(self):
+        return f'Product id={self.id}, name={self.name}'
 
     def to_json(self):
         return {
