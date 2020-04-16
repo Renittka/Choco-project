@@ -16,10 +16,10 @@
             <h3>
               <a id="title" href="" target="_blank"> {{ restaurant.name }}</a>
             </h3>
-            <p *ngIf="restaurant.rating">
-              <img id="rating" src="https://pngimage.net/wp-content/uploads/2018/06/rating-star-png-6.png">
-              {{ restaurant.rating }}
-            </p>
+<!--            <p *ngIf="restaurant.rating">-->
+<!--              <img id="rating" src="https://pngimage.net/wp-content/uploads/2018/06/rating-star-png-6.png" alt="picture">-->
+<!--              {{ restaurant.rating }}-->
+<!--            </p>-->
             <p *ngIf="restaurant.description">
               {{ restaurant.description }}
             </p>
@@ -32,8 +32,8 @@
             <p *ngIf="restaurant.min_order">
               Minimum order amount: {{restaurant.min_order}} tg.
             </p>
+            <button routerLink="categories/{{category.id}}/{{restaurant.id}}/" class="knopka">Order</button>
           </div>
-          <button routerLink="/order-link" class="knopka">Order</button>
         </div>
       </div>
   </div>

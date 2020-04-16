@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {Location} from '@angular/common';
-import {ActivatedRoute, Router} from '@angular/router';
-import {CategoryProductsService} from '../category-products.service';
-import {ProductService} from '../product.service';
-import {CategoryProducts} from '../category_products';
+import { Location } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CategoryProductsService } from '../category-products.service';
+import { ProductService } from '../product.service';
+import { CategoryProducts } from '../category_products';
 import { PRODUCTS } from '../products-mock';
 
 
@@ -13,11 +13,15 @@ import { PRODUCTS } from '../products-mock';
   styleUrls: ['./order-link.component.css']
 })
 export class OrderLinkComponent implements OnInit {
-  products = PRODUCTS;
+  products: CategoryProducts[];
+  restaurant: any;
   category;
+  product: CategoryProducts;
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
+    private CategoryProductService: CategoryProductsService,
     private productService: ProductService,
     private location: Location
   ) {
@@ -29,6 +33,17 @@ export class OrderLinkComponent implements OnInit {
   ngOnInit() {
     this.getProducts();
     this.getCategory();
+    this.getProductByRestaurant();
+  }
+
+  getProduct() {
+    const id = +this.route.snapshot.paramMap.get('restaurant_id');
+    this.CategoryProductService.getCategoryProducts(id).subscribe( product => this.products = product);
+    this.productService.getProduct(id).subscribe( product => this.restaurant = product);
+  }
+  getProductByRestaurant() {
+    const id = +this.route.snapshot.paramMap.get('product_id');
+    this.CategoryProductService.getProductByRestaurant(id).subscribe(product => this.product = product);
   }
 
     getProducts() {
