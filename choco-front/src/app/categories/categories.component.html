@@ -1,0 +1,22 @@
+<div class="list_of_categories">
+  <div class="block-list-of-categories">
+    <div *ngFor="let category of categories" class="category">
+      <img class="icon" src="{{ category.image }}">
+      <h5 routerLink="/categories/{{category.id}}" class="category_name">
+        {{category.name}}</h5>
+    </div>
+  </div>
+
+</div>
+<section id="mobile-app-download" style="background-image: url('assets/images/download.jpg');">
+  <div class="mobile-app-download-container">
+    <h2 id="label">Chocofood Mobile Application</h2>
+    <span id="under-label">All restaurants of the city in your pocket!</span>
+    <p id="under-label1">Download our free app for iOS and Android!</p>
+    <div class="link">
+      <a rel="noopener nofollow" target="_blank" href="https://itunes.apple.com/kz/app/chocofood.kz-zakaz-i-dostavka/id1033887038?mt=8" class="moblie-app-download__container__link ios">  <img src="../../assets/images/download-on-the-app-store-apple.jpg" class="button-download"></a>
+      <a rel="noopener nofollow" target="_blank" href="https://play.google.com/store/apps/details?id=kz.chocofood.chocofoodapp&referrer=utm_source=Chocofood.kz&utm_medium=banner_index" class="moblie-app-download__container__link ios">  <img src="../../assets/images/and.webp" class="button-download"></a>
+    </div>
+  </div>
+</section>
+
