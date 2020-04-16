@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
-# from api.models import Category, Restaurant, Product
+from api.models import Category, Restaurant, Product
 from django.http import JsonResponse
 
 

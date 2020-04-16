@@ -7,7 +7,7 @@ from django.urls import path
 # login/ - Login, verifying data from the database
 # signup/ - Signup, add data to the database
 
-from api.views import categories_list, category_restaurants, restaurants_products, product_order, login, signup
+from api.views.views import categories_list, category_restaurants, restaurants_products, product_order, login, signup
 
 urlpatterns = [
     path('categories/', categories_list),
