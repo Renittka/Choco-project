@@ -35,6 +35,7 @@ export class OrderLinkComponent implements OnInit {
       const id = +this.route.snapshot.paramMap.get('id');
       this.productService.getProductsByCategoryId(id).subscribe(products => this.products = products);
     }
+
     getCategory() {
       const id = +this.route.snapshot.paramMap.get('id');
       this.productService.getCategory(id).subscribe(category => this.category = category);

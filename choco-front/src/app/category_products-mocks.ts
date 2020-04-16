@@ -2,7 +2,7 @@ import { CategoryProducts} from './category_products';
 export const CategoryProduct: CategoryProducts[] = [
   {
     product_id: 1,
-    restaraunt_id: 10,
+    restaurant_id: 10,
     name: '8 Марта',
     price: 12600,
     delivery_cost: 600,
@@ -12,7 +12,7 @@ export const CategoryProduct: CategoryProducts[] = [
   },
   {
     product_id: 2,
-    restaraunt_id: 11,
+    restaurant_id: 11,
     name: 'Весенняя сказка',
     price: 10600,
     delivery_cost: 600,
@@ -21,7 +21,7 @@ export const CategoryProduct: CategoryProducts[] = [
       'Geo-Fiore.jpg'
   },  {
     product_id: 3,
-    restaraunt_id: 10,
+    restaurant_id: 10,
     name: 'Geo Fsdsfde',
     price: 600,
     delivery_cost: 600,
@@ -31,7 +31,7 @@ export const CategoryProduct: CategoryProducts[] = [
   },
   {
     product_id: 4,
-    restaraunt_id: 4,
+    restaurant_id: 4,
     name: 'Geo Fiore',
     price: 600,
     delivery_cost: 600,
@@ -41,7 +41,7 @@ export const CategoryProduct: CategoryProducts[] = [
   },
   {
     product_id: 5,
-    restaraunt_id: 10,
+    restaurant_id: 10,
     name: 'Розы',
     price: 15600,
     delivery_cost: 600,
@@ -51,7 +51,7 @@ export const CategoryProduct: CategoryProducts[] = [
   },
   {
     product_id: 6,
-    restaraunt_id: 20,
+    restaurant_id: 20,
     name: 'Маргарита',
     price: 1900,
     delivery_cost: 400,
@@ -61,7 +61,7 @@ export const CategoryProduct: CategoryProducts[] = [
   },
   {
     product_id: 6,
-    restaraunt_id: 20,
+    restaurant_id: 20,
     name: 'Маргарита',
     price: 1900,
     delivery_cost: 400,
@@ -71,7 +71,7 @@ export const CategoryProduct: CategoryProducts[] = [
   },
   {
     product_id: 7,
-    restaraunt_id: 21,
+    restaurant_id: 21,
     name: 'Маргарита',
     price: 1900,
     delivery_cost: 400,
@@ -81,7 +81,7 @@ export const CategoryProduct: CategoryProducts[] = [
   },
   {
     product_id: 8,
-    restaraunt_id: 21,
+    restaurant_id: 21,
     name: 'Маргарита',
     price: 1900,
     delivery_cost: 400,
@@ -89,4 +89,4 @@ export const CategoryProduct: CategoryProducts[] = [
     image: 'https://im0-tub-kz.yandex.net/i?id=ebd9d9bd6d221469b597af802b53846f&n=13&exp=1' +
       'Geo-Fiore.jpg'
   },
-  ]
+  ];

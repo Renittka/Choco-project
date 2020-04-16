@@ -8,7 +8,7 @@
         <div class="main1">
           <div class="photo1">
             <a>
-              <img routerLink="/categories/{{category.id}}/{{restaurant .id}}" class="photoSize" src="{{ restaurant.image }}">
+              <img routerLink="/categories/{{category.id}}/{{restaurant.id}}" class="photoSize" src="{{ restaurant.image }}">
             </a>
           </div>
 
@@ -33,6 +33,7 @@
               Minimum order amount: {{restaurant.min_order}} tg.
             </p>
           </div>
+          <button routerLink="/order-link" class="knopka">Order</button>
         </div>
       </div>
   </div>
