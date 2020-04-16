@@ -9,13 +9,13 @@ from api.serializers import CategorySerializer, RestaurantSerializer, ProductSer
 @api_view(['GET', 'POST'])
 def companies_list(request):
     if request.method == 'GET':
-        companies = Company.objects.all()
-        serializer = CompanySerializer2(companies, many=True)
+        categories = Category.objects.all()
+        serializer = CategorySerializer(categories, many=True)
 
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = CompanySerializer2(data=request.data)
+        serializer = CategorySerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -24,41 +24,41 @@ def companies_list(request):
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
-def companies_detail(request, company_id):
+def companies_detail(request, category_id):
     try:
-        company = Company.objects.get(id=company_id)
-    except Company.DoesNotExist as e:
+        category = Category.objects.get(id=category_id)
+    except Category.DoesNotExist as e:
         return Response({'error': str(e)})
 
     if request.method == 'GET':
-        serializer = CompanySerializer2(company)
+        serializer = CategorySerializer(category)
         return Response(serializer.data)
 
     elif request.method == 'PUT':
-        serializer = CompanySerializer2(instance=company, data=request.data)
+        serializer = CategorySerializer(instance=category, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
         return Response({'error': serializer.errors})
 
     elif request.method == 'DELETE':
-        company.delete()
+        category.delete()
         return Response({'deleted': True})
 
 
 @api_view(['GET', 'POST'])
-def company_vacancies(request, company_id):
+def category_restaurants(request, category_id):
     if request.method == 'GET':
         try:
-            vacancies = Vacancy.objects.filter(company_id=company_id)
-        except Vacancy.DoesNotExist as e:
+            restaurants = Restaurant.objects.filter(category_id=category_id)
+        except Restaurant.DoesNotExist as e:
             return Response({'error': str(e)})
 
-        serializer = VacancySerializer(vacancies, many=True)
+        serializer = RestaurantSerializer(restaurants, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = VacancySerializer(data=request.data)
+        serializer = RestaurantSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -67,18 +67,18 @@ def company_vacancies(request, company_id):
 
 
 @api_view(['GET', 'POST'])
-def vacancies_list(request):
+def restaurants_list(request):
     if request.method == 'GET':
         try:
-            vacancies = Vacancy.objects.all()
-        except Vacancy.DoesNotExist as e:
+            restaurants = Restaurant.objects.all()
+        except Restaurant.DoesNotExist as e:
             return Response({'error': str(e)})
 
-        serializer = VacancySerializer(vacancies, many=True)
+        serializer = RestaurantSerializer(restaurants, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = VacancySerializer(data=request.data)
+        serializer = RestaurantSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -87,18 +87,18 @@ def vacancies_list(request):
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
-def vacancies_detail(request, vacancy_id):
+def restaurant_detail(request, restaurant_id):
     try:
-        vacancy = Vacancy.objects.get(id=vacancy_id)
-    except Vacancy.DoesNotExist as e:
+        restaurant = Restaurant.objects.get(id=restaurant_id)
+    except Restaurant.DoesNotExist as e:
         return Response({'error': str(e)})
 
     if request.method == 'GET':
-        serializer = VacancySerializer(vacancy)
+        serializer = RestaurantSerializer(restaurant)
         return Response(serializer.data)
 
     elif request.method == 'PUT':
-        serializer = VacancySerializer(instance=vacancy, data=request.data)
+        serializer = RestaurantSerializer(instance=restaurant, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data,  status=status.HTTP_201_CREATED)
@@ -106,17 +106,6 @@ def vacancies_detail(request, vacancy_id):
                         status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     elif request.method == 'DELETE':
-        vacancy.delete()
+        restaurant.delete()
         return Response({'deleted': True})
 
-
-@api_view(['GET'])
-def vacancies_top(request):
-    if request.method == 'GET':
-        try:
-            top_vacancies = Vacancy.objects.order_by('-salary')[:10]
-        except Vacancy.DoesNotExist as e:
-            return Response({'error': str(e)})
-
-        serializer = VacancySerializer(top_vacancies, many=True)
-        return Response(serializer.data)
