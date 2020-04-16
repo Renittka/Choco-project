@@ -1,8 +1,6 @@
 <div class="product-list">
   <button (click)="goBack()" class="knopka">go back</button>
   <p class="hh">Order <span *ngIf="category">{{category.name}}</span> in <span *ngIf="restaurant">{{restaurant.name}}</span></p>
-
-
   <div class="restaurant-block">
 
     <div class="col-md-4" *ngFor="let product of products">
@@ -26,14 +24,10 @@
           <p *ngIf="product.price">
             Price: {{product.price}} tg.
           </p>
-          <button routerLink="categories/{{category.id}}/{{restaurant.id}}/{{product.product_id}}" class="order">Order</button>
+          <button routerLink="/categories/{{category.id}}/{{restaurant.id}}/{{product.product_id}}" class="order">Order</button>
         </div>
 
       </div>
     </div>
-
   </div>
-
-
-
 </div>

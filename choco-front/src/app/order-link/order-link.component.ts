@@ -4,7 +4,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryProductsService } from '../category-products.service';
 import { ProductService } from '../product.service';
 import { CategoryProduct } from '../category_products';
-import { PRODUCTS } from '../products-mock';
 
 
 @Component({
@@ -25,13 +24,12 @@ export class OrderLinkComponent implements OnInit {
     private productService: ProductService,
     private location: Location
   ) {
-    this.router.events.subscribe((value => {
-      this.getProducts();
-    }));
+    // this.router.events.subscribe((value => {
+    //   this.getProducts();
+    // }));
   }
 
   ngOnInit() {
-    this.getProducts();
     this.getCategory();
     this.getProductByRestaurant();
   }
@@ -45,11 +43,6 @@ export class OrderLinkComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('product_id');
     this.CategoryProductService.getProductByRestaurant(id).subscribe(product => this.product = product);
   }
-
-    getProducts() {
-      const id = +this.route.snapshot.paramMap.get('id');
-      this.productService.getProductsByCategoryId(id).subscribe(products => this.products = products);
-    }
 
     getCategory() {
       const id = +this.route.snapshot.paramMap.get('id');

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { PRODUCTS } from './products-mock';
+import { Restaurants } from './restaurants-mock';
 import { categories} from './categories';
 
 @Injectable({
@@ -9,18 +9,18 @@ import { categories} from './categories';
 export class ProductService {
   constructor() { }
   getProduct(id: number): Observable<any> {
-    return of(PRODUCTS.find(product => product.id === id));
+    return of(Restaurants.find(restaurant => restaurant.id === id));
   }
 
-  getProducts(): Observable<any> {
-    return of(PRODUCTS);
+  getRestaurants(): Observable<any> {
+    return of(Restaurants);
   }
 
-  getProductsByCategoryId(id: number): Observable<any> {
-    return of(PRODUCTS.filter(product => product.category_id === id));
+  getRestaurantsByCategoryId(id: number): Observable<any> {
+    return of(Restaurants.filter(restaurant => restaurant.category_id === id));
   }
-  getProductById(id): Observable<any> {
-    return of(PRODUCTS.find(product => product.id === id));
+  getRestaurantById(id): Observable<any> {
+    return of(Restaurants.find(restaurant => restaurant.id === id));
   }
 
   getCategory(id: number): Observable<any> {

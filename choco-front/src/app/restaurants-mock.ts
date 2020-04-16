@@ -1,5 +1,5 @@
-import { Product } from './product';
-export const PRODUCTS: Product[] = [
+import { Restaurant } from './restaurant';
+export const Restaurants: Restaurant[] = [
   //// Flowers
   { id: 10,
     category_id: 1,

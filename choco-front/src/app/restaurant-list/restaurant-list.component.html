@@ -3,8 +3,7 @@
   <p class="hh">Order <span *ngIf="category.name">{{category.name}}</span> in Almaty</p>
 
   <div class="restaurant-block">
-
-      <div class="col-md-4" *ngFor="let restaurant of products">
+      <div class="col-md-4" *ngFor="let restaurant of restaurants">
         <div class="main1">
           <div class="photo1">
             <a>
@@ -32,7 +31,7 @@
             <p *ngIf="restaurant.min_order">
               Minimum order amount: {{restaurant.min_order}} tg.
             </p>
-            <button routerLink="categories/{{category.id}}/{{restaurant.id}}/" class="knopka">Order</button>
+            <button routerLink="/categories/{{category.id}}/{{restaurant.id}}/" class="knopka">Order</button>
           </div>
         </div>
       </div>

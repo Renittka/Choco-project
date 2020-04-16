@@ -6,7 +6,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ProductListComponent} from './products-list/product-list.component';
+import { RestaurantListComponent} from './restaurant-list/restaurant-list.component';
 import { HeaderComponent } from './header/header.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { FooterComponent } from './footer/footer.component';
@@ -19,7 +19,7 @@ import { OrderLinkComponent } from './order-link/order-link.component';
 @NgModule({
     declarations: [
         AppComponent,
-        ProductListComponent,
+        RestaurantListComponent,
         HeaderComponent,
         CategoriesComponent,
         FooterComponent,

@@ -1,4 +1,4 @@
-export interface Product {
+export interface Restaurant {
   id: number ;
   category_id: number;
   name: string;

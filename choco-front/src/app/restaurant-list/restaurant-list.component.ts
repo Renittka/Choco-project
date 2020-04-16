@@ -1,17 +1,17 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { PRODUCTS } from '../products-mock';
 import {ActivatedRoute, Router} from '@angular/router';
 import { ProductService} from '../product.service';
 import { Location } from '@angular/common';
 import { Category } from '../category';
+import { Restaurant } from '../restaurant';
 
 @Component({
   selector: 'app-main',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  templateUrl: './restaurant-list.component.html',
+  styleUrls: ['./restaurant-list.component.css']
 })
-export class ProductListComponent implements OnInit {
-  products = PRODUCTS;
+export class RestaurantListComponent implements OnInit {
+  restaurants: Restaurant[];
   category: Category;
   constructor(
     private router: Router,
@@ -20,19 +20,19 @@ export class ProductListComponent implements OnInit {
     private location: Location
   ) {
     this.router.events.subscribe((value => {
-      this.getProducts();
+      this.getRestaurants();
     }));
   }
 
   ngOnInit() {
-    this.getProducts();
+    this.getRestaurants();
     this.getCategory();
   }
 
-  getProducts() {
+  getRestaurants() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.productService.getProductsByCategoryId(id)
-      .subscribe(products => this.products = products);
+    this.productService.getRestaurantsByCategoryId(id)
+      .subscribe(restaurants => this.restaurants = restaurants);
   }
 
   getCategory() {

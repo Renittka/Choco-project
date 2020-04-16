@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Observable, of} from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { CategoryProducts } from './category_products-mocks';
 import { CategoryProduct } from './category_products';
 
