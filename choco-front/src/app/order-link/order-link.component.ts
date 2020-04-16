@@ -44,7 +44,7 @@ export class OrderLinkComponent implements OnInit {
       this.location.back();
   }
 
-    order(){
-      alert('Your Order is accepted')
+    order() {
+      alert('Your Order is accepted');
     }
   }

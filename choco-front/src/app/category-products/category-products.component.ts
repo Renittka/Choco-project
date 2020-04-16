@@ -31,10 +31,11 @@ export class CategoryProductsComponent implements OnInit {
   }
 
   getProduct() {
-    const id = +this.route.snapshot.paramMap.get('restaraunt_id');
+    const id = +this.route.snapshot.paramMap.get('restaurant_id');
     this.CategoryProductService.getCategoryProducts(id).subscribe( product => this.products = product);
     this.productService.getProduct(id).subscribe( product => this.restaurant = product);
   }
+
   getCategory() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.productService.getCategory(id).subscribe(category => this.category = category);
