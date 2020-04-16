@@ -2,8 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { PRODUCTS } from '../products-mock';
 import {ActivatedRoute, Router} from '@angular/router';
 import { ProductService} from '../product.service';
-import { categories } from '../categories';
 import { Location } from '@angular/common';
+import { Category } from '../category';
 
 @Component({
   selector: 'app-main',
@@ -12,7 +12,7 @@ import { Location } from '@angular/common';
 })
 export class ProductListComponent implements OnInit {
   products = PRODUCTS;
-  category;
+  category: Category;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -28,14 +28,19 @@ export class ProductListComponent implements OnInit {
     this.getProducts();
     this.getCategory();
   }
+
   getProducts() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.productService.getProductsByCategoryId(id).subscribe(products => this.products = products);
+    this.productService.getProductsByCategoryId(id)
+      .subscribe(products => this.products = products);
   }
+
   getCategory() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.productService.getCategory(id).subscribe(category => this.category = category);
+    this.productService.getCategory(id)
+      .subscribe(category => this.category = category);
   }
+
   goBack(): void {
     this.location.back();
   }

@@ -1,4 +1,4 @@
-export interface CategoryProducts {
+export interface CategoryProduct {
   product_id: number;
   restaurant_id: number;
   name: string;

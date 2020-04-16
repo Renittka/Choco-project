@@ -3,7 +3,7 @@ import { Location } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryProductsService } from '../category-products.service';
 import { ProductService } from '../product.service';
-import { CategoryProducts } from '../category_products';
+import { CategoryProduct } from '../category_products';
 import { PRODUCTS } from '../products-mock';
 
 
@@ -13,10 +13,10 @@ import { PRODUCTS } from '../products-mock';
   styleUrls: ['./order-link.component.css']
 })
 export class OrderLinkComponent implements OnInit {
-  products: CategoryProducts[];
+  products: CategoryProduct[];
   restaurant: any;
   category;
-  product: CategoryProducts;
+  product: CategoryProduct;
 
   constructor(
     private router: Router,
@@ -38,7 +38,7 @@ export class OrderLinkComponent implements OnInit {
 
   getProduct() {
     const id = +this.route.snapshot.paramMap.get('restaurant_id');
-    this.CategoryProductService.getCategoryProducts(id).subscribe( product => this.products = product);
+    this.CategoryProductService.getCategoryProduct(id).subscribe( product => this.products = product);
     this.productService.getProduct(id).subscribe( product => this.restaurant = product);
   }
   getProductByRestaurant() {

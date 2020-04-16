@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService} from '../product.service';
-import {categories} from '../categories';
+import { Category } from '../category';
 
 @Component({
   selector: 'app-categories',
@@ -10,23 +10,22 @@ import {categories} from '../categories';
 })
 export class CategoriesComponent implements OnInit {
   products: any;
-  categories = categories;
+  categories: Category[];
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private productService: ProductService
   ) {
     this.router.events.subscribe((value => {
-      this.getProducts();
+      this.getCategories();
     }));
   }
   ngOnInit() {
-    this.getProducts();
+    this.getCategories();
   }
 
-  getProducts() {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.productService.getProductsByCategoryId(id).subscribe(products => this.products = products);
+  getCategories() {
+    this.productService.getCategories()
+      .subscribe(categories => this.categories = categories);
   }
-
 }

@@ -1,13 +1,4 @@
 import { Product } from './product';
-/*
-  id: number ;
-  category_id: number;
-  name: string;
-  price: string;
-  description: string;
-  image: string;
-  link: string;
- */
 export const PRODUCTS: Product[] = [
   //// Flowers
   { id: 10,
