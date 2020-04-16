@@ -71,3 +71,13 @@ class Product(models.Model):
             'delivery_cost': self.delivery_cost,
             'description': self.description
         }
+
+
+class Order(models.Model):
+    username = models.CharField(max_length=300)
+    email = models.CharField(max_length=300)
+    phone_number = models.CharField(max_length=300)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, default="", editable=False)
+    product_number = models.IntegerField()
+    total_cost = models.FloatField()
+    comments = models.TextField(default='')
