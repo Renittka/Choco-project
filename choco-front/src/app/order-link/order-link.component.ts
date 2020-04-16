@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryProductsService } from '../category-products.service';
 import { ProductService } from '../product.service';
 import { CategoryProduct } from '../category_products';
+import { Category } from '../category';
 
 
 @Component({
@@ -12,9 +13,8 @@ import { CategoryProduct } from '../category_products';
   styleUrls: ['./order-link.component.css']
 })
 export class OrderLinkComponent implements OnInit {
-  products: CategoryProduct[];
   restaurant: any;
-  category;
+  category: Category;
   product: CategoryProduct;
 
   constructor(
@@ -34,20 +34,15 @@ export class OrderLinkComponent implements OnInit {
     this.getProductByRestaurant();
   }
 
-  getProduct() {
-    const id = +this.route.snapshot.paramMap.get('restaurant_id');
-    this.CategoryProductService.getCategoryProduct(id).subscribe( product => this.products = product);
-    this.productService.getProduct(id).subscribe( product => this.restaurant = product);
-  }
   getProductByRestaurant() {
     const id = +this.route.snapshot.paramMap.get('product_id');
     this.CategoryProductService.getProductByRestaurant(id).subscribe(product => this.product = product);
   }
 
-    getCategory() {
-      const id = +this.route.snapshot.paramMap.get('id');
-      this.productService.getCategory(id).subscribe(category => this.category = category);
-    }
+  getCategory() {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.productService.getCategory(id).subscribe(category => this.category = category);
+  }
 
     goBack(): void {
       this.location.back();
