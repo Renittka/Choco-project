@@ -9,7 +9,7 @@ import {OrderLinkComponent} from './order-link/order-link.component';
 
 const routes: Routes = [
   { path: 'restaurants', component: RestaurantListComponent},
-  { path: '', redirectTo: '/categories', pathMatch: 'full' },
+  { path: '', redirectTo: 'categories', pathMatch: 'full' },
   { path: 'categories', component: CategoriesComponent},
   { path: 'categories/:id', component: RestaurantListComponent},
   { path: 'categories/:id/:restaurant_id', component: CategoryProductsComponent},
