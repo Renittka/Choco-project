@@ -20,7 +20,7 @@ class Category(models.Model):
 
 
 class Restaurant(models.Model):
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, default="", editable=False)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, default="", editable=False, related_name="categories")
     name = models.CharField(max_length=300)
     delivery_time = models.FloatField()
     delivery_cost = models.FloatField()
