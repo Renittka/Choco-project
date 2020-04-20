@@ -51,8 +51,6 @@ class Product(models.Model):
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE, default="", editable=False)
     name = models.CharField(max_length=300)
     price = models.FloatField()
-    delivery_cost = models.FloatField()
-    description = models.TextField(default='')
     image = models.CharField(max_length=300)
 
     class Meta:
@@ -67,9 +65,7 @@ class Product(models.Model):
             'restaurant_id': self.restaurant_id,
             'id': self.id,
             'name': self.name,
-            'price': self.price,
-            'delivery_cost': self.delivery_cost,
-            'description': self.description
+            'price': self.price
         }
 
 

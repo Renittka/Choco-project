@@ -15,6 +15,7 @@ import { SignupComponent } from './signup/signup.component';
 import { OrderComponent } from './order/order.component';
 import { CategoryProductsComponent } from './category-products/category-products.component';
 import { OrderLinkComponent } from './order-link/order-link.component';
+import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
 
 @NgModule({
     declarations: [
@@ -28,6 +29,7 @@ import { OrderLinkComponent } from './order-link/order-link.component';
         OrderComponent,
         CategoryProductsComponent,
         OrderLinkComponent,
+        RestaurantDetailComponent,
     ],
   imports: [
     BrowserModule,

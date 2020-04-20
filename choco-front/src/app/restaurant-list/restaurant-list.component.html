@@ -31,6 +31,7 @@
             <p *ngIf="restaurant.min_order">
               Minimum order amount: {{restaurant.min_order}} tg.
             </p>
+            <button routerLink="/categories/{{category.id}}/{{restaurant.id}}/detail" class="knopka">Details</button>
             <button routerLink="/categories/{{category.id}}/{{restaurant.id}}" class="knopka">Order</button>
           </div>
         </div>
