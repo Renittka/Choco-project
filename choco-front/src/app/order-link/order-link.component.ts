@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CategoryProductsService } from '../category-products.service';
 import { ProductService } from '../product.service';
-import { CategoryProduct } from '../category_products';
+import { Product } from '../product';
 import { Category } from '../category';
+import { CategoryService } from '../category.service';
 
 
 @Component({
@@ -15,13 +15,13 @@ import { Category } from '../category';
 export class OrderLinkComponent implements OnInit {
   restaurant: any;
   category: Category;
-  product: CategoryProduct;
+  product: Product;
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private CategoryProductService: CategoryProductsService,
     private productService: ProductService,
+    private categoryService: CategoryService,
     private location: Location
   ) {
     // this.router.events.subscribe((value => {
@@ -36,12 +36,12 @@ export class OrderLinkComponent implements OnInit {
 
   getProductByRestaurant() {
     const id = +this.route.snapshot.paramMap.get('product_id');
-    this.CategoryProductService.getProductByRestaurant(id).subscribe(product => this.product = product);
+    this.productService.getProductByRestaurant(id).subscribe(product => this.product = product);
   }
 
   getCategory() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.productService.getCategory(id).subscribe(category => this.category = category);
+    this.categoryService.getCategory(id).subscribe(category => this.category = category);
   }
 
     goBack(): void {

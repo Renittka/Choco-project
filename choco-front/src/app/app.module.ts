@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
+import {FormsModule} from '@angular/forms';
+import { AuthInterceptor } from './auth.interceptor';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,7 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
+import { RegistrationComponent } from './registration/registration.component';
 import { OrderComponent } from './order/order.component';
 import { CategoryProductsComponent } from './category-products/category-products.component';
 import { OrderLinkComponent } from './order-link/order-link.component';
@@ -25,7 +25,7 @@ import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail
         CategoriesComponent,
         FooterComponent,
         LoginComponent,
-        SignupComponent,
+        RegistrationComponent,
         OrderComponent,
         CategoryProductsComponent,
         OrderLinkComponent,
@@ -33,14 +33,17 @@ import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail
     ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
-
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

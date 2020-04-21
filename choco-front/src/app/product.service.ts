@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Restaurants } from './restaurants-mock';
-import { categories} from './categories';
+import { Products } from './product-mocks';
+import { Product } from './product';
 import { HttpClient } from '@angular/common/http';
-import { Category } from './category';
 
 @Injectable({
   providedIn: 'root'
@@ -13,27 +12,16 @@ export class ProductService {
 
   constructor(private http: HttpClient) {}
 
-  getProduct(id: number): Observable<any> {
-    return of(Restaurants.find(restaurant => restaurant.id === id));
+  getRestaurantProducts(restId: number): Observable<Product[]> {
+    return of(Products.filter(product => product.restaurant_id === restId));
+    // products by restaurant list
+    // return this.http.get<Product[]>(`${this.BASE_URL}/categories/${category_id}/${restaurant_id}/products`);
   }
 
-  getRestaurants(): Observable<any> {
-    return of(Restaurants);
-  }
+  getProductByRestaurant(id: number): Observable<Product> {
+    return of(Products.find(product => product.product_id === id));
+    // product detail
+    // return this.http.get<Product>(`${this.BASE_URL}/categories/${category_id}/${restaurant_id}/${product_id}/`);
 
-  getRestaurantsByCategoryId(id: number): Observable<any> {
-    return of(Restaurants.filter(restaurant => restaurant.category_id === id));
-  }
-  getRestaurantById(id): Observable<any> {
-    return of(Restaurants.find(restaurant => restaurant.id === id));
-  }
-
-  getCategory(id: number): Observable<any> {
-    return of(categories.find(category => category.id === id));
-  }
-
-  getCategories(): Observable<Category[]> {
-    return of(categories);
-    // return this.http.get<Category[]>(`${this.BASE_URL}/categories/`);
   }
 }

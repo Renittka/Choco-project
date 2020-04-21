@@ -2,16 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  selector: 'app-registration',
+  templateUrl: './registration.component.html',
+  styleUrls: ['./registration.component.css']
 })
-export class SignupComponent implements OnInit {
+export class RegistrationComponent implements OnInit {
 
   constructor(private location: Location ) { }
 
   ngOnInit(): void {
   }
+
   goBack(): void {
     this.location.back();
   }

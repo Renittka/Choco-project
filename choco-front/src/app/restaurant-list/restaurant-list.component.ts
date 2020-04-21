@@ -1,9 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
-import { ProductService} from '../product.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { RestaurantService} from '../restaurant.service';
 import { Location } from '@angular/common';
 import { Category } from '../category';
 import { Restaurant } from '../restaurant';
+import { CategoryService } from '../category.service';
 
 @Component({
   selector: 'app-main',
@@ -13,10 +14,12 @@ import { Restaurant } from '../restaurant';
 export class RestaurantListComponent implements OnInit {
   restaurants: Restaurant[];
   category: Category;
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private productService: ProductService,
+    private restaurantService: RestaurantService,
+    private categoryService: CategoryService,
     private location: Location
   ) {
     this.router.events.subscribe((value => {
@@ -31,13 +34,13 @@ export class RestaurantListComponent implements OnInit {
 
   getRestaurants() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.productService.getRestaurantsByCategoryId(id)
+    this.restaurantService.getRestaurantsByCategoryId(id)
       .subscribe(restaurants => this.restaurants = restaurants);
   }
 
   getCategory() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.productService.getCategory(id)
+    this.categoryService.getCategory(id)
       .subscribe(category => this.category = category);
   }
 

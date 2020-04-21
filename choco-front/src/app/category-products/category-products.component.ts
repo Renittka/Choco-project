@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryProductsService } from '../category-products.service';
 import { ProductService } from '../product.service';
-import { CategoryProduct } from '../category_products';
+import { RestaurantService } from '../restaurant.service';
+import { Product } from '../product';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Category } from '../category';
+import { CategoryService } from '../category.service';
+import { Restaurant } from '../restaurant';
 
 @Component({
   selector: 'app-category-products',
@@ -12,16 +14,17 @@ import { Category } from '../category';
   styleUrls: ['./category-products.component.css']
 })
 export class CategoryProductsComponent implements OnInit {
-  products: CategoryProduct[];
-  restaurant: any;
+  products: Product[];
+  restaurant: Restaurant;
   category: Category;
-  product: CategoryProduct;
+  product: Product;
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private categoryProductService: CategoryProductsService,
     private productService: ProductService,
+    private restaurantService: RestaurantService,
+    private categoryService: CategoryService,
     private location: Location
   ) {
   }
@@ -33,17 +36,17 @@ export class CategoryProductsComponent implements OnInit {
 
   getProductsByRestaurant() {
     const id = +this.route.snapshot.paramMap.get('restaurant_id');
-    this.categoryProductService.getRestaurantProducts(id).subscribe( products => this.products = products);
+    this.productService.getRestaurantProducts(id).subscribe( products => this.products = products);
   }
 
   getRestaurantById() {
     const id = +this.route.snapshot.paramMap.get('restaurant_id');
-    this.productService.getRestaurantById(id).subscribe( restaurant => this.restaurant = restaurant);
+    this.restaurantService.getRestaurantById(id).subscribe( restaurant => this.restaurant = restaurant);
   }
 
   getCategory() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.productService.getCategory(id)
+    this.categoryService.getCategory(id)
       .subscribe(category => this.category = category);
   }
 

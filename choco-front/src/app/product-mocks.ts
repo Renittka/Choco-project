@@ -1,5 +1,5 @@
-import { CategoryProduct } from './category_products';
-export const CategoryProducts: CategoryProduct[] = [
+import { Product } from './product';
+export const Products: Product[] = [
   {
     product_id: 1,
     restaurant_id: 10,
