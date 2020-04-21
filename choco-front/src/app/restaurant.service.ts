@@ -25,7 +25,7 @@ export class RestaurantService {
   getRestaurantById(id): Observable<Restaurant> {
     return of(Restaurants.find(restaurant => restaurant.id === id));
     // restaurant detail
-    // return this.http.get<Restaurant>(`${this.BASE_URL}/categories/${category_id}/${restaurant_id}/`);
+    // return this.http.get<Restaurant>(`${this.BASE_URL}/categories/${category_id}/restaurants/${restaurant_id}/`);
 
   }
 }

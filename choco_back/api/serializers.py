@@ -40,7 +40,7 @@ class ProductSerializer(serializers.ModelSerializer):
     restaurant_id = serializers.IntegerField(write_only=True)
 
     class Meta:
-        model = Restaurant
+        model = Product
         fields = ('id', 'name', 'price', 'image', 'restaurant', 'restaurant_id')
 
 

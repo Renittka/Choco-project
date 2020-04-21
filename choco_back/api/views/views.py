@@ -106,14 +106,13 @@ def restaurants_list(request):
 
 
 @csrf_exempt
-def restaurant_products(request, restaurant_id):
+def restaurant_products(request, category_id, restaurant_id):
     try:
-        restaurant = Restaurant.objects.get(id=restaurant_id)
-    except Restaurant.DoesNotExist as e:
+        products = Product.objects.filter(restaurant_id=restaurant_id)
+    except Product.DoesNotExist as e:
         return JsonResponse({'error': str(e)})
 
     if request.method == 'GET':
-        products = restaurant.products.all()
 
         # products_json = [product.to_json() for product in products]
         # return JsonResponse(products_json, safe=False)
@@ -132,7 +131,7 @@ def restaurant_products(request, restaurant_id):
 
 
 @csrf_exempt
-def restaurant_detail(request, restaurant_id):
+def restaurant_detail(request, category_id, restaurant_id):
     try:
         restaurant = Restaurant.objects.get(id=restaurant_id)
     except Restaurant.DoesNotExist as e:
@@ -158,7 +157,28 @@ def restaurant_detail(request, restaurant_id):
 
 
 @csrf_exempt
-def product_detail(request, product_id):
+def products_list(request):
+    if request.method == 'GET':
+        try:
+            products = Product.objects.all()
+        except Product.DoesNotExist as e:
+            return JsonResponse({'error': str(e)})
+
+        serializer = ProductSerializer(products, many=True)
+        return JsonResponse(serializer.data, safe=False)
+
+    elif request.method == 'POST':
+        request_body = json.loads(request.body)
+
+        serializer = ProductSerializer(data=request_body)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data)
+        return JsonResponse({'error': serializer.errors})
+
+
+@csrf_exempt
+def product_detail(request, category_id, restaurant_id, product_id):
     try:
         product = Product.objects.get(id=product_id)
     except Product.DoesNotExist as e:
