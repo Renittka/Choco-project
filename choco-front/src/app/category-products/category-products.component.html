@@ -24,9 +24,8 @@
           <p *ngIf="product.price">
             Price: {{product.price}} tg.
           </p>
-          <button routerLink="/categories/{{category.id}}/{{restaurant.id}}/{{product.product_id}}" class="order">Order</button>
+          <button routerLink="/categories/{{category.id}}/restaurants/{{restaurant.id}}/products/{{product.id}}/order" class="order">Order</button>
         </div>
-
       </div>
     </div>
   </div>

@@ -33,14 +33,14 @@ export class RestaurantListComponent implements OnInit {
   }
 
   getRestaurants() {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.restaurantService.getRestaurantsByCategoryId(id)
+    const categoryId = +this.route.snapshot.paramMap.get('category_id');
+    this.restaurantService.getRestaurantsByCategoryId(categoryId)
       .subscribe(restaurants => this.restaurants = restaurants);
   }
 
   getCategory() {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.categoryService.getCategory(id)
+    const categoryId = +this.route.snapshot.paramMap.get('category_id');
+    this.categoryService.getCategory(categoryId)
       .subscribe(category => this.category = category);
   }
 

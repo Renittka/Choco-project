@@ -1,7 +1,7 @@
 import { Product } from './product';
 export const Products: Product[] = [
   {
-    product_id: 1,
+    id: 1,
     restaurant_id: 10,
     name: '8 Марта',
     price: 12600,
@@ -11,7 +11,7 @@ export const Products: Product[] = [
       'Geo-Fiore.jpg'
   },
   {
-    product_id: 2,
+    id: 2,
     restaurant_id: 11,
     name: 'Весенняя сказка',
     price: 10600,
@@ -20,7 +20,7 @@ export const Products: Product[] = [
     image: 'https://avatars.mds.yandex.net/get-pdb/909049/e562ff5f-d3e3-467f-beca-c73ed17f3be9/s1200?webp=false' +
       'Geo-Fiore.jpg'
   },  {
-    product_id: 3,
+    id: 3,
     restaurant_id: 10,
     name: 'Geo Fsdsfde',
     price: 600,
@@ -30,7 +30,7 @@ export const Products: Product[] = [
       'Geo-Fiore.jpg'
   },
   {
-    product_id: 4,
+    id: 4,
     restaurant_id: 4,
     name: 'Geo Fiore',
     price: 600,
@@ -40,7 +40,7 @@ export const Products: Product[] = [
       'Geo-Fiore.jpg'
   },
   {
-    product_id: 5,
+    id: 5,
     restaurant_id: 10,
     name: 'Розы',
     price: 15600,
@@ -50,7 +50,7 @@ export const Products: Product[] = [
       'Geo-Fiore.jpg'
   },
   {
-    product_id: 6,
+    id: 6,
     restaurant_id: 20,
     name: 'Маргарита',
     price: 1900,
@@ -60,7 +60,7 @@ export const Products: Product[] = [
       'Geo-Fiore.jpg'
   },
   {
-    product_id: 6,
+    id: 6,
     restaurant_id: 20,
     name: 'Маргарита',
     price: 1900,
@@ -70,7 +70,7 @@ export const Products: Product[] = [
       'Geo-Fiore.jpg'
   },
   {
-    product_id: 7,
+    id: 7,
     restaurant_id: 21,
     name: 'Маргарита',
     price: 1900,
@@ -80,7 +80,7 @@ export const Products: Product[] = [
       'Geo-Fiore.jpg'
   },
   {
-    product_id: 8,
+    id: 8,
     restaurant_id: 21,
     name: 'Маргарита',
     price: 1900,

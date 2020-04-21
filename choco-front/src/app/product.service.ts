@@ -12,15 +12,17 @@ export class ProductService {
 
   constructor(private http: HttpClient) {}
 
-  getRestaurantProducts(restId: number): Observable<Product[]> {
-    return of(Products.filter(product => product.restaurant_id === restId));
+  getRestaurantProducts(categoryId: number, restaurantId: number): Observable<Product[]> {
+    // return of(Products.filter(product => product.restaurant_id === restId));
+
     // products by restaurant list
-    // return this.http.get<Product[]>(`${this.BASE_URL}/categories/${category_id}/restaurants/${restaurant_id}/products/`);
+    return this.http.get<Product[]>(`${this.BASE_URL}/categories/${categoryId}/restaurants/${restaurantId}/products/`);
   }
 
-  getProductByRestaurant(id: number): Observable<Product> {
-    return of(Products.find(product => product.product_id === id));
+  getProductByRestaurant(categoryId: number, restaurantId: number, productId: number): Observable<Product> {
+    // return of(Products.find(product => product.product_id === id));
+
     // product detail
-    // return this.http.get<Product>(`${this.BASE_URL}/categories/${category_id}/restaurants/${restaurant_id}/products/${product_id}/`);
+    return this.http.get<Product>(`${this.BASE_URL}/categories/${categoryId}/restaurants/${restaurantId}/products/${productId}/`);
   }
 }

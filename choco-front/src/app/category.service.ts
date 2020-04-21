@@ -13,15 +13,17 @@ export class CategoryService {
 
   constructor(private http: HttpClient) {}
 
-  getCategory(id: number): Observable<Category> {
-    return of(categories.find(category => category.id === id));
+  getCategory(categoryId: number): Observable<Category> {
+    // return of(categories.find(category => category.id === id));
+
     // category detail
-    // return this.http.get<Category>(`${this.BASE_URL}/categories/${category_id}/`);
+    return this.http.get<Category>(`${this.BASE_URL}/categories/${categoryId}/`);
   }
 
   getCategories(): Observable<Category[]> {
-    return of(categories);
+    // return of(categories);
+
     // categories list
-    // return this.http.get<Category[]>(`${this.BASE_URL}/categories/`);
+    return this.http.get<Category[]>(`${this.BASE_URL}/categories/`);
   }
 }

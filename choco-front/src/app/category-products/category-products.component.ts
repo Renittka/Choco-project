@@ -17,7 +17,6 @@ export class CategoryProductsComponent implements OnInit {
   products: Product[];
   restaurant: Restaurant;
   category: Category;
-  product: Product;
 
   constructor(
     private router: Router,
@@ -35,18 +34,20 @@ export class CategoryProductsComponent implements OnInit {
   }
 
   getProductsByRestaurant() {
-    const id = +this.route.snapshot.paramMap.get('restaurant_id');
-    this.productService.getRestaurantProducts(id).subscribe( products => this.products = products);
+    const categoryId = +this.route.snapshot.paramMap.get('category_id');
+    const restaurantId = +this.route.snapshot.paramMap.get('restaurant_id');
+    this.productService.getRestaurantProducts(categoryId, restaurantId).subscribe( products => this.products = products);
   }
 
   getRestaurantById() {
-    const id = +this.route.snapshot.paramMap.get('restaurant_id');
-    this.restaurantService.getRestaurantById(id).subscribe( restaurant => this.restaurant = restaurant);
+    const categoryId = +this.route.snapshot.paramMap.get('category_id');
+    const restaurantId = +this.route.snapshot.paramMap.get('restaurant_id');
+    this.restaurantService.getRestaurantById(categoryId, restaurantId).subscribe( restaurant => this.restaurant = restaurant);
   }
 
   getCategory() {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.categoryService.getCategory(id)
+    const categoryId = +this.route.snapshot.paramMap.get('category_id');
+    this.categoryService.getCategory(categoryId)
       .subscribe(category => this.category = category);
   }
 

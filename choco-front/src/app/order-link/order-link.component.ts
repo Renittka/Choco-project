@@ -5,6 +5,7 @@ import { ProductService } from '../product.service';
 import { Product } from '../product';
 import { Category } from '../category';
 import { CategoryService } from '../category.service';
+import { Restaurant } from '../restaurant';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { CategoryService } from '../category.service';
   styleUrls: ['./order-link.component.css']
 })
 export class OrderLinkComponent implements OnInit {
-  restaurant: any;
+  restaurant: Restaurant;
   category: Category;
   product: Product;
 
@@ -35,13 +36,15 @@ export class OrderLinkComponent implements OnInit {
   }
 
   getProductByRestaurant() {
-    const id = +this.route.snapshot.paramMap.get('product_id');
-    this.productService.getProductByRestaurant(id).subscribe(product => this.product = product);
+    const categoryId = +this.route.snapshot.paramMap.get('category_id');
+    const restaurantId = +this.route.snapshot.paramMap.get('restaurant_id');
+    const productId = +this.route.snapshot.paramMap.get('product_id');
+    this.productService.getProductByRestaurant(categoryId, restaurantId, productId).subscribe(product => this.product = product);
   }
 
   getCategory() {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.categoryService.getCategory(id).subscribe(category => this.category = category);
+    const categoryId = +this.route.snapshot.paramMap.get('category_id');
+    this.categoryService.getCategory(categoryId).subscribe(category => this.category = category);
   }
 
     goBack(): void {

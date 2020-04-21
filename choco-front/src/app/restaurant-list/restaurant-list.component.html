@@ -7,7 +7,7 @@
         <div class="main1">
           <div class="photo1">
             <a>
-              <img routerLink="/categories/{{category.id}}/{{restaurant.id}}" class="photoSize" src="{{ restaurant.image }}">
+              <img routerLink="/categories/{{category.id}}/restaurants/{{restaurant.id}}" class="photoSize" src="{{ restaurant.image }}">
             </a>
           </div>
 
@@ -15,24 +15,16 @@
             <h3>
               <a id="title" href="" target="_blank"> {{ restaurant.name }}</a>
             </h3>
-<!--            <p *ngIf="restaurant.rating">-->
-<!--              <img id="rating" src="https://pngimage.net/wp-content/uploads/2018/06/rating-star-png-6.png" alt="picture">-->
-<!--              {{ restaurant.rating }}-->
-<!--            </p>-->
             <p *ngIf="restaurant.description">
               {{ restaurant.description }}
             </p>
-            <p *ngIf="restaurant.delivery_time">
-              Delivery time: {{restaurant.delivery_time}} min
-            </p>
-            <p *ngIf="restaurant.delivery_cost">
-              Delivery cost: {{restaurant.delivery_cost}} tg.
-            </p>
-            <p *ngIf="restaurant.min_order">
-              Minimum order amount: {{restaurant.min_order}} tg.
-            </p>
-            <button routerLink="/categories/{{category.id}}/{{restaurant.id}}/detail" class="knopka">Details</button>
-            <button routerLink="/categories/{{category.id}}/{{restaurant.id}}" class="knopka">Order</button>
+            <button routerLink="/categories/{{category.id}}/restaurants/{{restaurant.id}}" class="knopka">
+              Details
+            </button>
+
+            <button routerLink="/categories/{{category.id}}/restaurants/{{restaurant.id}}/products" class="knopka">
+              Order
+            </button>
           </div>
         </div>
       </div>

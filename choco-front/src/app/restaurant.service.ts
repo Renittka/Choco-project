@@ -13,19 +13,20 @@ export class RestaurantService {
   constructor(private http: HttpClient) {}
 
   getRestaurants(): Observable<Restaurant[]> {
-    return of(Restaurants);
+    // return of(Restaurants);
+    return this.http.get<Restaurant[]>(`${this.BASE_URL}/restaurants/`);
   }
 
-  getRestaurantsByCategoryId(id: number): Observable<Restaurant[]> {
-    return of(Restaurants.filter(restaurant => restaurant.category_id === id));
+  getRestaurantsByCategoryId(categoryId: number): Observable<Restaurant[]> {
+    // return of(Restaurants.filter(restaurant => restaurant.category_id === id));
     // restaurants by category list
-    // return this.http.get<Restaurant[]>(`${this.BASE_URL}/categories/${category_id}/restaurants/`);
+    return this.http.get<Restaurant[]>(`${this.BASE_URL}/categories/${categoryId}/restaurants/`);
   }
 
-  getRestaurantById(id): Observable<Restaurant> {
-    return of(Restaurants.find(restaurant => restaurant.id === id));
+  getRestaurantById(categoryId: number, restaurantId: number): Observable<Restaurant> {
+    // return of(Restaurants.find(restaurant => restaurant.id === id));
     // restaurant detail
-    // return this.http.get<Restaurant>(`${this.BASE_URL}/categories/${category_id}/restaurants/${restaurant_id}/`);
+    return this.http.get<Restaurant>(`${this.BASE_URL}/categories/${categoryId}/restaurants/${restaurantId}/`);
 
   }
 }

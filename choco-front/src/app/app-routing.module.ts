@@ -12,12 +12,15 @@ const routes: Routes = [
   { path: 'restaurants', component: RestaurantListComponent},
   { path: '', redirectTo: 'categories', pathMatch: 'full' },
   { path: 'categories', component: CategoriesComponent},
-  { path: 'categories/:id', component: RestaurantListComponent},
-  { path: 'categories/:id/:restaurant_id', component: CategoryProductsComponent},
-  { path: 'categories/:id/:restaurant_id/detail', component: RestaurantDetailComponent},
+
+  { path: 'categories/:category_id/restaurants', component: RestaurantListComponent},
+  { path: 'categories/:category_id/restaurants/:restaurant_id', component: RestaurantDetailComponent},
+
+  { path: 'categories/:category_id/restaurants/:restaurant_id/products', component: CategoryProductsComponent},
+  { path: 'categories/:category_id/restaurants/:restaurant_id/products/:product_id/order', component: OrderLinkComponent},
+
   { path: 'login', component: LoginComponent},
   { path: 'registration', component: RegistrationComponent},
-  { path: 'categories/:id/:restaurant_id/:product_id', component: OrderLinkComponent},
  ];
 
 @NgModule({

@@ -1,7 +1,8 @@
 <button (click)="goBack()" class="knopka">Back</button>
 <h1>Basket</h1>
-<h2 *ngIf="category.name">{{category.name}}</h2>
-<h2 *ngIf="product.name">Order {{product.name}}</h2>
+<h2 *ngIf="category.name">Order {{category.name}}</h2>
+<h3 *ngIf="product.name">Name: {{product.name}}</h3>
+<h3 *ngIf="product.price">Price: {{product.price}}</h3>
 <div class="add">
   <form id="log_form" method="post">
     <label for = "data" class='a'>Enter your name and surname
@@ -33,4 +34,5 @@
 
     <button (click)="order()" class="knopka">Order</button>
   </form>
+  <br>
 </div>
