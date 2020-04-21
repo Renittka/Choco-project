@@ -1,20 +1,24 @@
-<button (click)="goBack()" class="knopka">Go back</button>
+<button (click)="goBack()" class="knopka">Back</button>
 <form class="form" id = "regist_form">
   <h2>Registration:</h2>
-  <div>
-    <label for = "us_name">Your name: </label>
-    <input class="label" type="text" name="us_name" id="us_name" placeholder="Киану Ривз"><br>
+    <label for = "us_name">Your name:
+      <input class="label" type="text" name="us_name" id="us_name" placeholder="Киану Ривз"><br>
+    </label>
+    <label for = "us_phone">Contact phone number:
+      <input class="label" type="text" name="us_phone" id="us_phone" placeholder="+7"> <br>
+    </label>
 
-    <label for = "us_phone">Contact phone number: </label>
-    <input class="label" type="text" name="us_phone" id="us_phone" placeholder="+7"> <br>
+    <label for = "us_email">E-mail:
+      <input class="label" type="text" name="us_email" id="us_email" placeholder = "example@chocofood.kz"><br>
+    </label>
 
-    <label for = "us_email">E-mail: </label>
-    <input class="label" type="text" name="us_email" id="us_email" placeholder = "example@chocofood.kz"><br>
+    <label for = "us_password">Password:
+      <input class="label" type="password" name="us_password" id="us_password" placeholder="Enter your password"> <br>
+    </label>
 
-    <label for = "us_password">Password: </label>
-    <input class="label" type="password" name="us_password" id="us_password" placeholder="Enter your password"> <br>
-    <label for = "us_password2">Repeat your password: </label>
-    <input class="label" type="password" name="us_password2" id="us_password2" placeholder="Repeat your password"> <br>
+    <label for = "us_password2">Repeat your password:
+      <input class="label" type="password" name="us_password2" id="us_password2" placeholder="Repeat your password"> <br>
+    </label>
 
     <select aria-label="Day" name="birthday_day" id="day" title="Day">
       <option value="0">Day</option><option value="1">1</option>
@@ -84,23 +88,8 @@
       <option value="1992">1992</option>
       <option value="1991">1991</option>
       <option value="1990">1990</option></select>
-    <br>
-    <label for = "us_submit"></label>
-    <input class="button" style="margin-top:5px;" type="submit" name="us_submit" id="us_submit" value = "Регистрация">
-
-    <div>
-      <label class="checkbox_container">
-        <input type="checkbox" name="registration_accept" checked="checked">
-        <span class="caption">I accept the terms of
-        <a href=" " target="_blank">agreements </a></span>
-      </label>
-      <br>
-      <label class="checkbox_container">
-        <input type="checkbox" name="registration_allow" checked="checked">
-        <span class="caption">I want to receive news about tasty promotions, discounts and special offers.</span>
-      </label>
-    </div>
-  </div>
+  <br>
+  <button>Register</button>
 </form>
 
 

@@ -1,38 +1,33 @@
 <button (click)="goBack()" class="knopka">Back</button>
-<h1>Basket</h1>
-<h2 *ngIf="category.name">Order {{category.name}}</h2>
-<h3 *ngIf="product.name">Name: {{product.name}}</h3>
-<h3 *ngIf="product.price">Price: {{product.price}}</h3>
-<div class="add">
-  <form id="log_form" method="post">
-    <label for = "data" class='a'>Enter your name and surname
-    </label>
-    <input class="label" type="text" name="data" id="data" placeholder="Keanu Reaves"> <br>
+<div class="form">
+  <h2 *ngIf="category.name">Order {{category.name}}</h2>
+  <h3 *ngIf="product.name">Name: {{product.name}}</h3>
+  <h3 *ngIf="product.price">Price: {{product.price}} tg.</h3>
+    <form id="log_form" method="post">
+      <label>Enter your name and surname
+        <input class="label" type="text" name="data" placeholder="Keanu Reaves">
+      </label> <br>
 
-    <label for = "data" class='a'>Enter your e-mail
+      <label>Enter your e-mail
+        <input class="label" type="text" name="data"  placeholder="example@chocofood.kz">
+      </label> <br>
 
-    </label>
-    <input class="label" type="text" name="data" id="data" placeholder="example@chocofood.kz"> <br>
+      <label>Enter your phone number
+        <input class="label" type="text" name="data"  placeholder="+7-***-***--">
+      </label> <br>
 
-    <label for = "data" class='a'>Enter your phone number
+      <label>Comments to Order
+        <input class="label" type="text" name="data" placeholder="Comments">
+      </label> <br>
 
-    </label>
-    <input class="label" type="text" name="data" id="data" placeholder="+7-***-***--"> <br>
+      <label>Enter Your Card Number
+        <input class="label" type="text" name="data" placeholder="**** **** **** ****">
+      </label> <br>
 
-    <label for = "data" class='a'>Comments to Order
+      <p class="p">Нажимая на кнопку "Order" Вы даете согласие на обработку указанных персональных данных в соответствии
+        с законом РК и подтверждаете, что ознакомлены с политикой конфиденциальности</p>
 
-    </label>
-    <input class="label" type="text" name="data" id="data" placeholder="Comments"> <br>
-
-    <label for = "data" class='a'>Enter Your Card Number
-
-    </label>
-    <input class="label" type="text" name="data" id="data" placeholder="**** **** **** ****"> <br>
-
-    <p class="p">Нажимая на кнопку "Order" Вы даете согласие на обработку указанных персональных данных в соответствии
-      с законом РК и подтверждаете, что ознакомлены с политикой конфиденциальности</p>
-
-    <button (click)="order()" class="knopka">Order</button>
-  </form>
-  <br>
+      <button (click)="order()">Order</button>
+    </form>
+    <br>
 </div>

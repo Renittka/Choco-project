@@ -1,16 +1,6 @@
-.knopka{
-  margin-left: 100px;
-  margin-top: 20px;
-  background-color: #4caf50;
-  height: 30px;
-  width: 100px;
-  border: 0;
-  border-radius: 2px;
-  font-size: 15px;
-  color: #fff;
-  letter-spacing: .5px;
-  display: inline-block;
-  cursor: pointer;
+
+.context1 {
+  margin-left: 30px;
 }
 .order{
   margin-top: 20px;
@@ -31,7 +21,7 @@
   background-color: #f4f4f4;
 }
 .photoSize{
-  width: 83px;
+  width: 110px;
   height: 83px;
   margin-top: 10px;
   margin-left: 10px;
@@ -54,12 +44,12 @@
 }
 .main1{
   background-color: #ffffff;
-  min-width: 340px;
-  min-height: 274px;
+  min-width: 320px;
+  min-height: 174px;
   margin-right: 40px;
   display: flex;
   flex-direction: row;
-  width: 340px;
+  width: 320px;
   justify-content: space-between;
   margin-top: 15px;
   padding: 10px;

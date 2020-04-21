@@ -3,19 +3,13 @@
   margin: 0 auto;
   background-color: #f4f4f4;
 }
-.knopka{
-  margin-left: 100px;
-  margin-top: 20px;
-  background-color: #4caf50;
-  height: 30px;
-  width: 100px;
-  border: 0;
-  border-radius: 2px;
-  font-size: 15px;
-  color: #fff;
-  letter-spacing: .5px;
-  display: inline-block;
-  cursor: pointer;
+
+#detail {
+  margin-left: 20px;
+
+}
+#order {
+  margin-left: 20px;
 }
 .hh{
   font-size: 18px;
@@ -27,8 +21,11 @@
   font-family: sans-serif;
 }
 .photoSize{
-  width: 83px;
-  height: 83px;
+  width: 110px;
+  height: 90px;
+}
+.context1 {
+  margin-left: 20px;
 }
 .col-md-4{
   display: inline-block;
@@ -39,7 +36,7 @@
 .main1{
   background-color: #ffffff;
   min-width: 340px;
-  min-height: 274px;
+  min-height: 200px;
   margin-right: 40px;
   display: flex;
   flex-direction: row;

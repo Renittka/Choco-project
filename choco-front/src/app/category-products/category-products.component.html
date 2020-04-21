@@ -1,5 +1,5 @@
 <div class="product-list">
-  <button (click)="goBack()" class="knopka">go back</button>
+  <button (click)="goBack()" class="knopka">Back</button>
   <p class="hh">Order <span *ngIf="category">{{category.name}}</span> in <span *ngIf="restaurant">{{restaurant.name}}</span></p>
   <div class="restaurant-block">
 
@@ -7,7 +7,7 @@
       <div class="main1">
         <div class="photo1">
           <a>
-            <img  class="photoSize" src="{{ product.image }}">
+            <img  class="photoSize" src="https://hokku-sushi.chocofood.kz/static/img/nophoto-450x300.png?v=3">
           </a>
         </div>
 
@@ -15,12 +15,6 @@
           <h3>
             <a id="title" href="" target="_blank"> {{ product.name }}</a>
           </h3>
-          <p *ngIf="product.description">
-            {{ product.description }}
-          </p>
-          <p *ngIf="product.delivery_cost">
-            Delivery cost: {{product.delivery_cost}} tg.
-          </p>
           <p *ngIf="product.price">
             Price: {{product.price}} tg.
           </p>

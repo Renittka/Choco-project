@@ -51,7 +51,6 @@ class Product(models.Model):
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE, default="", editable=False)
     name = models.CharField(max_length=300)
     price = models.FloatField()
-    image = models.CharField(max_length=300)
 
     class Meta:
         verbose_name = 'Product'

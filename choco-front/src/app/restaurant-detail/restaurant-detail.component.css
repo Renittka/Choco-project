@@ -3,20 +3,6 @@
   margin: 0 auto;
   background-color: #f4f4f4;
 }
-.knopka{
-  margin-left: 100px;
-  margin-top: 20px;
-  background-color: #4caf50;
-  height: 30px;
-  width: 100px;
-  border: 0;
-  border-radius: 2px;
-  font-size: 15px;
-  color: #fff;
-  letter-spacing: .5px;
-  display: inline-block;
-  cursor: pointer;
-}
 .hh{
   font-size: 18px;
   font-weight: 400;
