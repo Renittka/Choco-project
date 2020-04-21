@@ -1,0 +1,25 @@
+<div class="product-list">
+  <button (click)="goBack()" class="knopka">Back</button>
+  <p class="hh">All Restaurants in Almaty</p>
+
+  <div class="restaurant-block">
+    <div class="col-md-4" *ngFor="let restaurant of restaurants">
+      <div class="main1">
+        <div class="photo1">
+          <a>
+            <img class="photoSize" src="{{ restaurant.image }}">
+          </a>
+        </div>
+
+        <div class="context1">
+          <h3>
+            <a id="title" href="" target="_blank"> {{ restaurant.name }}</a>
+          </h3>
+          <p *ngIf="restaurant.description">
+            {{ restaurant.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

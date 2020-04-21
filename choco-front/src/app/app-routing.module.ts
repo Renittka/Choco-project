@@ -7,9 +7,10 @@ import { RegistrationComponent } from './registration/registration.component';
 import { CategoryProductsComponent } from './category-products/category-products.component';
 import { OrderLinkComponent } from './order-link/order-link.component';
 import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
+import { AllRestaurantsComponent } from './all-restaurants/all-restaurants.component';
 
 const routes: Routes = [
-  { path: 'restaurants', component: RestaurantListComponent},
+  { path: 'restaurants', component: AllRestaurantsComponent},
   { path: '', redirectTo: 'categories', pathMatch: 'full' },
   { path: 'categories', component: CategoriesComponent},
 

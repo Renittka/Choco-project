@@ -1,5 +1,5 @@
 <div class="product-list">
-  <button (click)="goBack()" class="knopka">Back</button>
+  <button (click)="goBack()" class="knopka">go back</button>
   <p class="hh">Order <span *ngIf="category.name">{{category.name}}</span> in Almaty</p>
 
   <div class="restaurant-block">
@@ -18,13 +18,13 @@
             <p *ngIf="restaurant.description">
               {{ restaurant.description }}
             </p>
-            <button routerLink="/categories/{{category.id}}/restaurants/{{restaurant.id}}" class="knopka" id="detail">
+            <button routerLink="/categories/{{category.id}}/restaurants/{{restaurant.id}}" class="knopka">
               Details
             </button>
-
-            <button routerLink="/categories/{{category.id}}/restaurants/{{restaurant.id}}/products" class="knopka" id="order">
+            <button routerLink="/categories/{{category.id}}/restaurants/{{restaurant.id}}/products" class="knopka">
               Order
             </button>
+
           </div>
         </div>
       </div>

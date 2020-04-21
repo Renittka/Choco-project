@@ -16,6 +16,7 @@ import { OrderComponent } from './order/order.component';
 import { CategoryProductsComponent } from './category-products/category-products.component';
 import { OrderLinkComponent } from './order-link/order-link.component';
 import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
+import { AllRestaurantsComponent } from './all-restaurants/all-restaurants.component';
 
 @NgModule({
     declarations: [
@@ -30,6 +31,7 @@ import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail
         CategoryProductsComponent,
         OrderLinkComponent,
         RestaurantDetailComponent,
+        AllRestaurantsComponent,
     ],
   imports: [
     BrowserModule,
